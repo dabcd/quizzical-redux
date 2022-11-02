@@ -133,6 +133,7 @@ body {
 
 .Answer:hover {
   background-color: #96a1d7;
+  cursor: pointer;
 }
 
 .answer--chosen {

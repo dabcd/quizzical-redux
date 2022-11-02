@@ -10,6 +10,7 @@ import {
   selectCheck,
   selectPlayAgain,
 } from "./app/appSlice";
+import "./loader.css";
 // import data from "./api.json";
 
 // category=17 -> science and nature
@@ -43,18 +44,15 @@ export default function Game() {
 
   let quiz = null;
   if (data) {
-    quiz = data.map(
-      (elem, index) => (
-        <Question
-          key={elem.questionId}
-          id={index}
-        />
-      )
-    );
+    quiz = data.map((elem, index) => (
+      <Question key={elem.questionId} id={index} />
+    ));
   }
 
+  // Simple CSS loader from 
+  // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader2
   if (dataStatus === "loading") {
-    return <h3>loading...</h3>;
+    return <div className="loader"></div>;
   }
 
   return (
