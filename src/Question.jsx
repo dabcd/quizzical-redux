@@ -2,11 +2,7 @@ import React from "react";
 import { decode } from "html-entities";
 import Answer from "./Answer";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  increaseScore,
-  selectData,
-  selectCheck,
-} from "./app/appSlice";
+import { increaseScore, selectData, selectCheck } from "./app/appSlice";
 
 function initChoices() {
   const a = [];
@@ -57,19 +53,17 @@ export default function Question(props) {
   }
 
   let answersElements = [];
-  if (choices.length !== 0) {
-    for (let i = 0; i < 4; i++) {
-      answersElements[i] = (
-        <Answer
-          key={data[props.id].answersId[i]}
-          id={i}
-          qId={props.id}
-          chooseAnswer={chooseAnswer}
-          isChosen={choices[i].isChosen}
-          isCorrect={choices[i].isCorrect}
-        />
-      );
-    }
+  for (let i = 0; i < 4; i++) {
+    answersElements[i] = (
+      <Answer
+        key={data[props.id].answersId[i]}
+        id={i}
+        qId={props.id}
+        chooseAnswer={chooseAnswer}
+        isChosen={choices[i].isChosen}
+        isCorrect={choices[i].isCorrect}
+      />
+    );
   }
 
   return (

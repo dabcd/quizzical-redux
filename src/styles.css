@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 80vh;
 }
 
 .start--title {
@@ -38,21 +38,36 @@ body {
   margin: 10px;
 }
 
-.start--button,
+.start--topics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.start--topic-button {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: #ede7f780;
+  border: solid 2px grey;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 100ms ease-in-out;
+}
+
+.start--topic-button:hover {
+  background-color: #d1c5ea;
+  cursor: pointer;
+}
+
 .game--button {
   font-family: "Inter", sans-serif;
   color: var(--btn-text-color);
   background-color: var(--btn-bg-color);
   border: none;
   transition: all 200ms ease-in-out;
-}
-
-.start--button {
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 15px;
-  margin: 20px 0;
-  padding: 15px 25px;
 }
 
 .game--button {
@@ -63,7 +78,6 @@ body {
   padding: 10px 20px;
 }
 
-.start--button:hover,
 .game--button:hover {
   background-color: #241a93;
   cursor: pointer;
