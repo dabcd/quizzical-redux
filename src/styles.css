@@ -42,7 +42,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 14px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .start--topic-button {
@@ -94,6 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  margin: 0 20px;
 }
 
 .game--score {
@@ -178,4 +179,10 @@ body {
   background-color: rgba(0, 128, 0, 1);
   color: white;
   opacity: 1;
+}
+
+@media (max-width: 450px) {
+  .game--results {
+    gap: 20px;
+  }
 }
